@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Form from './form';
 import './grid.css';
 
 function App() {
   return (
-    <Form />
+    <div >
+      <h1  className='App'>Form</h1>
+      <Form />
+    </div>  
   );
 }
 

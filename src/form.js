@@ -8,6 +8,10 @@ class Form extends React.Component {
         password: '',
     }
 
+    onSubmit = (e) =>{
+        e.preventDefault();
+        console.log(this.state)
+    }
 
     render(){
         return(
@@ -26,19 +30,20 @@ class Form extends React.Component {
 
 
                 <input 
-                    placeholder='first name'
-                    value={this.state.firstName} 
-                    onChange={e => this.setState({firstName: e.target.value})}
+                    placeholder='user name'
+                    value={this.state.userName} 
+                    onChange={e => this.setState({userName: e.target.value})}
                   />
 
 
                 <input 
-                    placeholder='first name'
-                    value={this.state.firstName} 
-                    onChange={e => this.setState({firstName: e.target.value})} 
+                type = 'password'
+                    placeholder='password'
+                    value={this.state.password} 
+                    onChange={e => this.setState({password: e.target.value})} 
                  />
 
-
+                <button onClick ={(e) => this.onSubmit(e)}>Submit</button>
 
             </form>
         );
